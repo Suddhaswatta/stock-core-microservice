@@ -11,5 +11,6 @@ public class Stock {
     String company;
     Integer quantity;
     Double price;
+    String currencyCode;
 
 }
