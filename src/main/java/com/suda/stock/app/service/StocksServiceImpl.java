@@ -20,6 +20,7 @@ public class StocksServiceImpl implements StockService {
         this.stockRepository = stockRepository;
     }
 
+    @Override
     public Flux<StockDTO> getStocksEvent() {
 
         return stockRepository
