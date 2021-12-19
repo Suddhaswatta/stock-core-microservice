@@ -11,7 +11,8 @@ public class DTOUtils {
         return stockMono
                 .map(stock -> StockDTO.builder()
                         .stockName(stock.getCompany())
-                        .price(format("%.02f %s",stock.getPrice(),stock.getCurrencyCode()))
+                        .price(stock.getPrice())
+                        .currencyCode(stock.getCurrencyCode())
                         .build());
     }
 }

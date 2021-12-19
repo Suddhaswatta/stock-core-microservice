@@ -29,7 +29,7 @@ class StocksServiceImplTest {
 
     @BeforeEach
     void setUp() {
-        stockDTOBuilder = StockDTO.builder();
+        stockDTOBuilder = StockDTO.builder().currencyCode("USD");
         stocksService = new StocksServiceImpl(stockRepository);
     }
 
@@ -43,12 +43,12 @@ class StocksServiceImplTest {
                 .expectNext(
                         stockDTOBuilder
                                 .stockName("Apple")
-                                .price("1000.00 USD").build()
+                                .price(1000.00).build()
                 )
                 .expectNext(
                         stockDTOBuilder
                                 .stockName("Facebook")
-                                .price("900.00 USD").build()
+                                .price(900.00).build()
                 )
                 .verifyComplete();
 

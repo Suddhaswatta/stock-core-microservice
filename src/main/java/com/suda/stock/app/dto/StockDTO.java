@@ -11,5 +11,8 @@ public class StockDTO {
     @JsonProperty("stock-name")
     String stockName;
     @JsonProperty("stock-price")
-    String price;
+    Double price;
+    @JsonProperty("currency")
+    String currencyCode;
+
 }
