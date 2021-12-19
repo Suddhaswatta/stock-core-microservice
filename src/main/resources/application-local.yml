@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: stock-service-app
+server:
+  port: 8086
+api:
+  version: v1
+  name: stocks-api
+  uri : stocks
